@@ -19,6 +19,8 @@ from django.contrib import admin
 from django.urls import path, include
 from django.contrib.auth import views as auth_views
 
+def home(request):
+    return HttpResponse("<h1>Welcome to Hamna's Django App on Vercel </h1>")
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('accounts/', include('accounts.urls')),
